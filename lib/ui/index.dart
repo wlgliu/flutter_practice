@@ -14,8 +14,8 @@ class _HomeState extends State<Home> {
       'router': 'statefulCycle',
     }, 
     {
-      'text': '生命周期',
-      'router': 'statefulCycle',
+      'text': 'provider',
+      'router': 'stateManage',
     }, 
     
   ]; 
@@ -37,8 +37,6 @@ class _HomeState extends State<Home> {
             child: GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: () {
-                print('${contentList[index]['text']}');
-
                 Navigator.pushNamed(context, contentList[index]['router']);
               },
               child: Container(

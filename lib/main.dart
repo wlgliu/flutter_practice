@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter 实践',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class RouteObserver extends NavigatorObserver {
-
+  /// 路由监听
   @override
   void didPush(Route route, Route previousRoute) {
     // ignore: unused_local_variable
@@ -33,17 +33,16 @@ class RouteObserver extends NavigatorObserver {
     try {
       fromPage = previousRoute.settings.name;
     } catch(e) {
-      print('获取上一页的路由出错： $e');
+      // print('获取上一页的路由出错： $e');
     }
     
     try {
       currentPage = route.settings.name;
     } catch(e) {
-      print('获取当前页的路由出错： $e');
+      // print('获取当前页的路由出错： $e');
     }
     
     super.didPush(route, previousRoute);
   }
-
   
 }
