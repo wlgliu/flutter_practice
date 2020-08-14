@@ -14,10 +14,13 @@ class _HomeState extends State<Home> {
       'router': 'statefulCycle',
     }, 
     {
-      'text': 'provider',
+      'text': 'provider-未完成',
       'router': 'stateManage',
     }, 
-    
+    {
+      'text': '视频播放',
+      'router': 'videoPlay',
+    }, 
   ]; 
   ScrollController _scrollController = ScrollController();
 
