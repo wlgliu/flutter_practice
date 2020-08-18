@@ -18,8 +18,12 @@ class _HomeState extends State<Home> {
       'router': 'stateManage',
     }, 
     {
-      'text': '视频播放',
+      'text': '视频播放-自定义',
       'router': 'videoPlay',
+    }, 
+    {
+      'text': '视频播放-chewie',
+      'router': 'videoPlayChewie',
     }, 
   ]; 
   ScrollController _scrollController = ScrollController();

@@ -4,6 +4,7 @@ import 'package:flutter_practice/ui/stateManage/stateManage.dart';
 import 'package:flutter_practice/ui/stateful_cycle/next_page.dart';
 import 'package:flutter_practice/ui/stateful_cycle/stateful_cycle.dart';
 import 'package:flutter_practice/ui/video_play/video_play.dart';
+import 'package:flutter_practice/ui/video_play_chewie/video_play_chewie.dart';
 
 Map<String, WidgetBuilder> routers = {
   'home': (context) => Home(),
@@ -13,6 +14,7 @@ Map<String, WidgetBuilder> routers = {
   'nextPage': (context) => NextPage(),
   'stateManage': (context) => StateManage(),
   'videoPlay': (context) => VideoPlay(),
+  'videoPlayChewie': (context) => VideoPlayChewie(),
 
 };
 

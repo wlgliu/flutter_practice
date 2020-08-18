@@ -42,14 +42,14 @@ class _VideoPlayState extends State<VideoPlay> {
       
       // print('音量 ${_controller.value.volume}');
 
-      print('视频进度 ${_controller.value.position}');
+      print('视频进度 ${_controller.value.position}/${_controller.value.duration}');
 
       // print('视频宽高 ${_controller.value.size}');
 
-      print('视频总长度 ${_controller.value.duration}');
+      // print('视频总长度 ${_controller.value.duration}');
 
       // 视频播放完后复位
-      if (_controller.value.position >= _controller.value.duration && !_setReset) {
+      if (_controller.value.position == _controller.value.duration && !_setReset) {
 
         _controller.seekTo(Duration(hours: 0, minutes: 0, seconds: 0, milliseconds: 0, ));
 
@@ -64,19 +64,24 @@ class _VideoPlayState extends State<VideoPlay> {
         
 
         print(_controller.value.isPlaying);
+      } else {
+        if (_setReset) {
+          setState(() {
+            _setReset = false;
+          });
+        }
       }
 
       // _controller.position.then(((onValue){
       //   print('${'*'*100} $onValue');
       // }));
 
-      if (_controller.value.position == Duration(hours: 0, minutes: 0, seconds: 0)) {
-        print('开始位置');
-      }
+      // if (_controller.value.position == Duration(hours: 0, minutes: 0, seconds: 0)) {
+      //   print('开始位置');
+      // }
 
 
     });
-
 
     super.initState();
   }
